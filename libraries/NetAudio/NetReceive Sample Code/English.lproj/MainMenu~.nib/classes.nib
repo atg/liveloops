@@ -1,0 +1,14 @@
+{
+    IBClasses = (
+        {CLASS = FirstResponder; LANGUAGE = ObjC; SUPERCLASS = NSObject; }, 
+        {
+            ACTIONS = {openNetReceive = id; stopNetReceive = id; }; 
+            CLASS = NetReceiveTest; 
+            LANGUAGE = ObjC; 
+            OUTLETS = {ip = id; port = id; scope = id; service = id; }; 
+            SUPERCLASS = NSObject; 
+        }, 
+        {CLASS = Oscilloscope; LANGUAGE = ObjC; SUPERCLASS = NSView; }
+    ); 
+    IBVersion = 1; 
+}
