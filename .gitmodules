@@ -1,0 +1,3 @@
+[submodule "libraries/MAAsyncIO"]
+	path = libraries/MAAsyncIO
+	url = https://github.com/mikeash/MAAsyncIO.git

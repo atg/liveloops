@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>SchemeUserState</key>
+	<dict>
+		<key>Create Port Map Release Zip.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>1</integer>
+		</dict>
+		<key>Create Release Zips.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>0</integer>
+		</dict>
+		<key>Create TCMPortMapper Release Zip.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>5</integer>
+		</dict>
+		<key>NATEcho.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>4</integer>
+		</dict>
+		<key>Port Map.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>3</integer>
+		</dict>
+		<key>TCMPortMapper.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>2</integer>
+		</dict>
+		<key>UPnP Command Line Debug Tool.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>6</integer>
+		</dict>
+	</dict>
+	<key>SuppressBuildableAutocreation</key>
+	<dict>
+		<key>3180119E0D4DEC8400BE3B28</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>F214E5DA0D5F5FE600A06962</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>F21B76960DB73CFC00942BC0</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>F24603510DB4B19100C509E9</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>F246036A0DB4B45900C509E9</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>F24603720DB4B4B600C509E9</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>F2C65FFE0D50C2D100820CAE</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+	</dict>
+</dict>
+</plist>
