@@ -7,16 +7,20 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <QTKit/QTKit.h>
 
 @interface LLLoop : NSObject {
     double currentLoopOffset;
-    NSData* currentLoopPCM;
+    NSData* audioData;
+    QTMovie* movie;
 }
 
 @property (assign) double currentLoopOffset;
-@property (copy) NSData* currentLoopPCM;
+@property (copy) NSData* audioData;
+@property (retain) QTMovie* movie;
 
 - (void)unpackFromASCII:(NSData*)ascii;
 - (NSData*)packIntoASCII;
+- (void)readMovie;
 
 @end

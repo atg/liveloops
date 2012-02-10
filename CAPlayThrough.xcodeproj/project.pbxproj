@@ -7,16 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		7541702F14E45B5E00A9DFAD /* AudioDevice.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7541701E14E45B5E00A9DFAD /* AudioDevice.cpp */; };
-		7541703014E45B5E00A9DFAD /* AudioDevice.h in Headers */ = {isa = PBXBuildFile; fileRef = 7541701F14E45B5E00A9DFAD /* AudioDevice.h */; };
-		7541703114E45B5E00A9DFAD /* AudioDeviceList.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7541702014E45B5E00A9DFAD /* AudioDeviceList.cpp */; };
-		7541703214E45B5E00A9DFAD /* AudioDeviceList.h in Headers */ = {isa = PBXBuildFile; fileRef = 7541702114E45B5E00A9DFAD /* AudioDeviceList.h */; };
-		7541703314E45B5E00A9DFAD /* CAPlayThrough.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7541702214E45B5E00A9DFAD /* CAPlayThrough.cpp */; };
-		7541703414E45B5E00A9DFAD /* CAPlayThrough.h in Headers */ = {isa = PBXBuildFile; fileRef = 7541702314E45B5E00A9DFAD /* CAPlayThrough.h */; };
 		7541703514E45B5E00A9DFAD /* CAPlayThroughController.h in Headers */ = {isa = PBXBuildFile; fileRef = 7541702414E45B5E00A9DFAD /* CAPlayThroughController.h */; };
 		7541703614E45B5E00A9DFAD /* CAPlayThroughController.mm in Sources */ = {isa = PBXBuildFile; fileRef = 7541702514E45B5E00A9DFAD /* CAPlayThroughController.mm */; };
-		7541703714E45B5E00A9DFAD /* CARingBuffer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7541702614E45B5E00A9DFAD /* CARingBuffer.cpp */; };
-		7541703814E45B5E00A9DFAD /* CARingBuffer.h in Headers */ = {isa = PBXBuildFile; fileRef = 7541702714E45B5E00A9DFAD /* CARingBuffer.h */; };
 		7541703914E45B5E00A9DFAD /* LLLoop.h in Headers */ = {isa = PBXBuildFile; fileRef = 7541702814E45B5E00A9DFAD /* LLLoop.h */; };
 		7541703A14E45B5E00A9DFAD /* LLLoop.m in Sources */ = {isa = PBXBuildFile; fileRef = 7541702914E45B5E00A9DFAD /* LLLoop.m */; };
 		7541703B14E45B5E00A9DFAD /* LLRemoteClient.h in Headers */ = {isa = PBXBuildFile; fileRef = 7541702A14E45B5E00A9DFAD /* LLRemoteClient.h */; };
@@ -45,16 +37,13 @@
 		7541706614E45C4600A9DFAD /* MAAsyncIO.h in Headers */ = {isa = PBXBuildFile; fileRef = 7541706514E45C4600A9DFAD /* MAAsyncIO.h */; };
 		7541706F14E45F4D00A9DFAD /* TCMPortMapper.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7541706E14E45F4D00A9DFAD /* TCMPortMapper.framework */; };
 		7541707114E4611E00A9DFAD /* TCMPortMapper.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 7541706E14E45F4D00A9DFAD /* TCMPortMapper.framework */; };
+		7541707914E4A7B100A9DFAD /* QTKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7541707814E4A7B100A9DFAD /* QTKit.framework */; };
 		8B9E523A0687AE9C00738FA5 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8B9E52370687AE9C00738FA5 /* AudioToolbox.framework */; };
 		8B9E523B0687AE9C00738FA5 /* AudioUnit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8B9E52380687AE9C00738FA5 /* AudioUnit.framework */; };
 		8B9E523C0687AE9C00738FA5 /* CoreAudio.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8B9E52390687AE9C00738FA5 /* CoreAudio.framework */; };
 		8D11072A0486CEB800E47090 /* MainMenu.nib in Resources */ = {isa = PBXBuildFile; fileRef = 29B97318FDCFA39411CA2CEA /* MainMenu.nib */; };
 		8D11072B0486CEB800E47090 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 089C165CFE840E0CC02AAC07 /* InfoPlist.strings */; };
 		8D11072F0486CEB800E47090 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */; };
-		F702A9290F620DCD001A5AE6 /* CAAutoDisposer.h in Headers */ = {isa = PBXBuildFile; fileRef = F702A9280F620DCD001A5AE6 /* CAAutoDisposer.h */; };
-		F722E3480C31BE3400478C12 /* CAStreamBasicDescription.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F722E3460C31BE3400478C12 /* CAStreamBasicDescription.cpp */; };
-		F722E3490C31BE3400478C12 /* CAStreamBasicDescription.h in Headers */ = {isa = PBXBuildFile; fileRef = F722E3470C31BE3400478C12 /* CAStreamBasicDescription.h */; };
-		F746FF120D80897300000BDA /* CABitOperations.h in Headers */ = {isa = PBXBuildFile; fileRef = F746FF110D80897300000BDA /* CABitOperations.h */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -76,16 +65,8 @@
 		29B97319FDCFA39411CA2CEA /* English */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = English; path = English.lproj/MainMenu.nib; sourceTree = "<group>"; };
 		29B97324FDCFA39411CA2CEA /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = /System/Library/Frameworks/AppKit.framework; sourceTree = "<absolute>"; };
 		29B97325FDCFA39411CA2CEA /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = /System/Library/Frameworks/Foundation.framework; sourceTree = "<absolute>"; };
-		7541701E14E45B5E00A9DFAD /* AudioDevice.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = AudioDevice.cpp; path = source/AudioDevice.cpp; sourceTree = "<group>"; };
-		7541701F14E45B5E00A9DFAD /* AudioDevice.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AudioDevice.h; path = source/AudioDevice.h; sourceTree = "<group>"; };
-		7541702014E45B5E00A9DFAD /* AudioDeviceList.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = AudioDeviceList.cpp; path = source/AudioDeviceList.cpp; sourceTree = "<group>"; };
-		7541702114E45B5E00A9DFAD /* AudioDeviceList.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AudioDeviceList.h; path = source/AudioDeviceList.h; sourceTree = "<group>"; };
-		7541702214E45B5E00A9DFAD /* CAPlayThrough.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = CAPlayThrough.cpp; path = source/CAPlayThrough.cpp; sourceTree = "<group>"; };
-		7541702314E45B5E00A9DFAD /* CAPlayThrough.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CAPlayThrough.h; path = source/CAPlayThrough.h; sourceTree = "<group>"; };
 		7541702414E45B5E00A9DFAD /* CAPlayThroughController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CAPlayThroughController.h; path = source/CAPlayThroughController.h; sourceTree = "<group>"; };
 		7541702514E45B5E00A9DFAD /* CAPlayThroughController.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = CAPlayThroughController.mm; path = source/CAPlayThroughController.mm; sourceTree = "<group>"; };
-		7541702614E45B5E00A9DFAD /* CARingBuffer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = CARingBuffer.cpp; path = source/CARingBuffer.cpp; sourceTree = "<group>"; };
-		7541702714E45B5E00A9DFAD /* CARingBuffer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CARingBuffer.h; path = source/CARingBuffer.h; sourceTree = "<group>"; };
 		7541702814E45B5E00A9DFAD /* LLLoop.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LLLoop.h; path = source/LLLoop.h; sourceTree = "<group>"; };
 		7541702914E45B5E00A9DFAD /* LLLoop.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LLLoop.m; path = source/LLLoop.m; sourceTree = "<group>"; };
 		7541702A14E45B5E00A9DFAD /* LLRemoteClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LLRemoteClient.h; path = source/LLRemoteClient.h; sourceTree = "<group>"; };
@@ -113,15 +94,12 @@
 		7541705214E45BF800A9DFAD /* MAHTTPRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MAHTTPRequest.m; path = libraries/MAAsyncIO/MAHTTPRequest.m; sourceTree = "<group>"; };
 		7541706514E45C4600A9DFAD /* MAAsyncIO.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MAAsyncIO.h; path = source/MAAsyncIO.h; sourceTree = "<group>"; };
 		7541706E14E45F4D00A9DFAD /* TCMPortMapper.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = TCMPortMapper.framework; sourceTree = "<group>"; };
+		7541707814E4A7B100A9DFAD /* QTKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QTKit.framework; path = System/Library/Frameworks/QTKit.framework; sourceTree = SDKROOT; };
 		8B9E52370687AE9C00738FA5 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = /System/Library/Frameworks/AudioToolbox.framework; sourceTree = "<absolute>"; };
 		8B9E52380687AE9C00738FA5 /* AudioUnit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioUnit.framework; path = /System/Library/Frameworks/AudioUnit.framework; sourceTree = "<absolute>"; };
 		8B9E52390687AE9C00738FA5 /* CoreAudio.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreAudio.framework; path = /System/Library/Frameworks/CoreAudio.framework; sourceTree = "<absolute>"; };
 		8D1107310486CEB800E47090 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		8D1107320486CEB800E47090 /* CAPlayThrough.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CAPlayThrough.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		F702A9280F620DCD001A5AE6 /* CAAutoDisposer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CAAutoDisposer.h; sourceTree = "<group>"; };
-		F722E3460C31BE3400478C12 /* CAStreamBasicDescription.cpp */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.cpp.cpp; path = CAStreamBasicDescription.cpp; sourceTree = "<group>"; };
-		F722E3470C31BE3400478C12 /* CAStreamBasicDescription.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = CAStreamBasicDescription.h; sourceTree = "<group>"; };
-		F746FF110D80897300000BDA /* CABitOperations.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CABitOperations.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -129,6 +107,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7541707914E4A7B100A9DFAD /* QTKit.framework in Frameworks */,
 				8D11072F0486CEB800E47090 /* Cocoa.framework in Frameworks */,
 				8B9E523A0687AE9C00738FA5 /* AudioToolbox.framework in Frameworks */,
 				8B9E523B0687AE9C00738FA5 /* AudioUnit.framework in Frameworks */,
@@ -143,16 +122,8 @@
 		080E96DDFE201D6D7F000001 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
-				7541701E14E45B5E00A9DFAD /* AudioDevice.cpp */,
-				7541701F14E45B5E00A9DFAD /* AudioDevice.h */,
-				7541702014E45B5E00A9DFAD /* AudioDeviceList.cpp */,
-				7541702114E45B5E00A9DFAD /* AudioDeviceList.h */,
-				7541702214E45B5E00A9DFAD /* CAPlayThrough.cpp */,
-				7541702314E45B5E00A9DFAD /* CAPlayThrough.h */,
 				7541702414E45B5E00A9DFAD /* CAPlayThroughController.h */,
 				7541702514E45B5E00A9DFAD /* CAPlayThroughController.mm */,
-				7541702614E45B5E00A9DFAD /* CARingBuffer.cpp */,
-				7541702714E45B5E00A9DFAD /* CARingBuffer.h */,
 				7541702814E45B5E00A9DFAD /* LLLoop.h */,
 				7541702914E45B5E00A9DFAD /* LLLoop.m */,
 				7541702A14E45B5E00A9DFAD /* LLRemoteClient.h */,
@@ -214,8 +185,8 @@
 		29B97314FDCFA39411CA2CEA /* CAPlayThrough */ = {
 			isa = PBXGroup;
 			children = (
+				7541707814E4A7B100A9DFAD /* QTKit.framework */,
 				080E96DDFE201D6D7F000001 /* Classes */,
-				F774F8C10C31BC4500BE4582 /* PublicUtility */,
 				29B97315FDCFA39411CA2CEA /* Other Sources */,
 				29B97317FDCFA39411CA2CEA /* Resources */,
 				29B97323FDCFA39411CA2CEA /* Frameworks */,
@@ -251,18 +222,6 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		F774F8C10C31BC4500BE4582 /* PublicUtility */ = {
-			isa = PBXGroup;
-			children = (
-				F702A9280F620DCD001A5AE6 /* CAAutoDisposer.h */,
-				F746FF110D80897300000BDA /* CABitOperations.h */,
-				F722E3460C31BE3400478C12 /* CAStreamBasicDescription.cpp */,
-				F722E3470C31BE3400478C12 /* CAStreamBasicDescription.h */,
-			);
-			name = PublicUtility;
-			path = Extras/CoreAudio/PublicUtility;
-			sourceTree = DEVELOPER_DIR;
-		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -270,14 +229,7 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F722E3490C31BE3400478C12 /* CAStreamBasicDescription.h in Headers */,
-				F746FF120D80897300000BDA /* CABitOperations.h in Headers */,
-				F702A9290F620DCD001A5AE6 /* CAAutoDisposer.h in Headers */,
-				7541703014E45B5E00A9DFAD /* AudioDevice.h in Headers */,
-				7541703214E45B5E00A9DFAD /* AudioDeviceList.h in Headers */,
-				7541703414E45B5E00A9DFAD /* CAPlayThrough.h in Headers */,
 				7541703514E45B5E00A9DFAD /* CAPlayThroughController.h in Headers */,
-				7541703814E45B5E00A9DFAD /* CARingBuffer.h in Headers */,
 				7541703914E45B5E00A9DFAD /* LLLoop.h in Headers */,
 				7541703B14E45B5E00A9DFAD /* LLRemoteClient.h in Headers */,
 				7541703D14E45B5E00A9DFAD /* LLRemoteHost.h in Headers */,
@@ -361,12 +313,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F722E3480C31BE3400478C12 /* CAStreamBasicDescription.cpp in Sources */,
-				7541702F14E45B5E00A9DFAD /* AudioDevice.cpp in Sources */,
-				7541703114E45B5E00A9DFAD /* AudioDeviceList.cpp in Sources */,
-				7541703314E45B5E00A9DFAD /* CAPlayThrough.cpp in Sources */,
 				7541703614E45B5E00A9DFAD /* CAPlayThroughController.mm in Sources */,
-				7541703714E45B5E00A9DFAD /* CARingBuffer.cpp in Sources */,
 				7541703A14E45B5E00A9DFAD /* LLLoop.m in Sources */,
 				7541703C14E45B5E00A9DFAD /* LLRemoteClient.m in Sources */,
 				7541703E14E45B5E00A9DFAD /* LLRemoteHost.m in Sources */,

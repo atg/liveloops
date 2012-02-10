@@ -40,23 +40,26 @@
 */
  
 #import <Cocoa/Cocoa.h>
-#include "CAPlayThrough.h"
-#include "AudioDeviceList.h"
+#import <QTKit/QTKit.h>
+//#include "CAPlayThrough.h"
+//#include "AudioDeviceList.h"
 #import "MAAsyncIO.h"
+
+@class LLLoop;
 
 @interface CAPlayThroughController : NSObject
 {
 	IBOutlet NSPopUpButton *		mInputDevices;
-	IBOutlet NSPopUpButton *		mOutputDevices;
+//	IBOutlet NSPopUpButton *		mOutputDevices;
     IBOutlet NSButton *				mStartButton;
 	IBOutlet NSProgressIndicator *	mProgress;
 
-	CAPlayThroughHost *				playThroughHost;
+//	CAPlayThroughHost *				playThroughHost;
         	
-	AudioDeviceList *				mInputDeviceList;
-	AudioDeviceList	*				mOutputDeviceList;
-	AudioDeviceID					inputDevice;
-	AudioDeviceID					outputDevice;
+//	AudioDeviceList *				mInputDeviceList;
+//	AudioDeviceList	*				mOutputDeviceList;
+//	AudioDeviceID					inputDevice;
+//	AudioDeviceID					outputDevice;
     
     IBOutlet NSArrayController *arrayController;
     IBOutlet NSTextField *listenPort;
@@ -74,14 +77,31 @@
     
     NSOperationQueue* clientsQueue;
     NSMutableArray* remoteClients;
+    
+    NSTimeInterval playbackSessionStart;
+    
+    
+    QTCaptureSession* session;
+    NSTimeInterval captureSessionStart;
+    NSString* captureSessionOutputPath;
+    
+    
+    LLLoop* loop;
 }
 
 - (IBAction)startStop:(id)sender;
 - (IBAction)inputDeviceSelected:(id)sender;
-- (IBAction)outputDeviceSelected:(id)sender;
+//- (IBAction)outputDeviceSelected:(id)sender;
 - (void)portMapperDidFinishWork:(NSNotification *)aNotification;
 
 - (void)start: (id)sender;
 - (void)stop: (id)sender;
 - (void)resetPlayThrough;
+
+- (void)recordLoop;
+- (void)stopCaptureSession;
+- (void)checkOnCaptureSession;
+
+- (void)buildMenus;
+
 @end

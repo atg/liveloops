@@ -1,4 +1,4 @@
-/*	Copyright © 2007 Apple Inc. All Rights Reserved.
+/*	Copyright ï¿½ 2007 Apple Inc. All Rights Reserved.
 	
 	Disclaimer: IMPORTANT:  This Apple software is supplied to you by 
 			Apple Inc. ("Apple") in consideration of your agreement to the
@@ -40,7 +40,7 @@
 */
 #ifndef __CAPlayThrough_H__
 #define __CAPlayThrough_H__
-
+/*
 #define checkErr( err) \
 if(err) {\
 	OSStatus error = static_cast<OSStatus>(err);\
@@ -51,13 +51,14 @@ if(err) {\
 				   fflush(stdout);\
 		return err; \
 }         
-
-#include <CoreAudio/CoreAudio.h>
-#include <AudioToolbox/AudioToolbox.h>
-#include <AudioUnit/AudioUnit.h>
-#include "CARingBuffer.h"
-#include "AudioDevice.h"
-#include "CAStreamBasicDescription.h"
+*/
+#import <QTKit/QTKit.h>
+//#include <CoreAudio/CoreAudio.h>
+//#include <AudioToolbox/AudioToolbox.h>
+//#include <AudioUnit/AudioUnit.h>
+//#include "CARingBuffer.h"
+//#include "AudioDevice.h"
+//#include "CAStreamBasicDescription.h"
 
 class CAPlayThrough;
 
