@@ -143,6 +143,7 @@
     captureSessionOutputPath = [[self makeTemporaryFile] copy];
     [fileout recordToOutputFileURL:[NSURL fileURLWithPath:captureSessionOutputPath isDirectory:NO]];
     
+    NSLog(@"fileout = %@", fileout);
     if (![session addOutput:fileout error:&err]) {
         NSLog(@"Error adding output: %@", err);
         return;
@@ -173,7 +174,7 @@
     if (captureSessionStart == 0)
         return;
     
-    if (LLTimestamp() - captureSessionStart < 2.0) {
+    if (LLTimestamp() - captureSessionStart < BAR_LENGTH + 1.0) {
         [self performSelector:@selector(checkOnCaptureSession) withObject:nil afterDelay:0.125];
         return;
     }

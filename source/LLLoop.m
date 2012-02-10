@@ -53,11 +53,13 @@
 - (void)readMovie {
     NSError* err = nil;
     QTMovie* tempmovie = [[[QTMovie alloc] initWithData:audioData error:&err] autorelease];
+    NSLog(@"tempmovie = %@", tempmovie);
     if (!tempmovie) {
         NSLog(@"Error reading movie: %@", err);
         return;
     }
     
+    NSLog(@"Movie is of time: %@", QTStringFromTime([tempmovie duration]));
     self.movie = [[[QTMovie alloc] initWithMovie:tempmovie timeRange:QTMakeTimeRange(QTMakeTimeWithTimeInterval(0), QTMakeTimeWithTimeInterval(BAR_LENGTH)) error:&err] autorelease];
     if (!movie) {
         NSLog(@"Error cropping movie: %@", err);
