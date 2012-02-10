@@ -89,6 +89,8 @@
     LLLoop* loop;
 }
 
++ (id)sharedInstance;
+
 - (IBAction)startStop:(id)sender;
 - (IBAction)inputDeviceSelected:(id)sender;
 //- (IBAction)outputDeviceSelected:(id)sender;

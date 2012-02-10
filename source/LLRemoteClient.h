@@ -20,10 +20,9 @@
 }
 
 @property (copy) NSData* peeraddress;
-
-@property (readonly) LLLoop* loop;
-
+@property (retain) LLLoop* loop;
 @property (retain) MAAsyncReader* reader;
+
 - (void)disconnect;
 
 @end

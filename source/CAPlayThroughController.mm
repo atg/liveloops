@@ -12,8 +12,16 @@
 
 @implementation CAPlayThroughController
 
++ (id)sharedInstance {
+    return [NSApp delegate];
+}
+
 - (id)init
 {
+    self = [super init];
+    if (!self)
+        return nil;
+    
 	return self;
 }
 
@@ -31,6 +39,8 @@
     });
     
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(portMapperDidFinishWork:) name:TCMPortMapperDidFinishWorkNotification object:[TCMPortMapper sharedInstance]];
+    
+    playbackSessionStart = LLTimestamp();
 }
 - (void)disconnect {
     [NSApp terminate:nil];
@@ -183,6 +193,7 @@
     [self stopCaptureSession];
     
     if (loop) {
+        [self stopLoop:loop];
         [loop release];
         loop = nil;
     }

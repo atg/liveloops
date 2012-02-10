@@ -72,6 +72,8 @@
 - (void)dealloc {
     
     self.audioData = nil;
+    
+    [self.movie stop];
     self.movie = nil;
     
     [super dealloc];

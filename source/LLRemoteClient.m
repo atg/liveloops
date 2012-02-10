@@ -8,13 +8,12 @@
 
 #import "LLRemoteClient.h"
 #import "LLLoop.h"
+#import "CAPlayThroughController.h"
 
 @implementation LLRemoteClient
 
 @synthesize peeraddress;
-
 @synthesize loop;
-
 @synthesize reader;
 
 - (void)read {
@@ -24,7 +23,14 @@
             return;
         }
         
-        [loop unpackFromASCII:data];
+        dispatch_sync(dispatch_get_main_queue(), ^{
+            [[CAPlayThroughController sharedInstance] stopLoop:self.loop];
+            self.loop = nil;
+            self.loop = [[LLLoop alloc] init];
+            [self.loop unpackFromASCII:data];
+            [[CAPlayThroughController sharedInstance] playLoop:self.loop];
+        });
+        
         [self read];
     }];
 }
