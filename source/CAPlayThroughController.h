@@ -84,7 +84,7 @@
     QTCaptureSession* session;
     NSTimeInterval captureSessionStart;
     NSString* captureSessionOutputPath;
-    
+    QTCaptureDevice* openedDevice;
     
     LLLoop* loop;
 }
@@ -98,10 +98,17 @@
 - (void)stop: (id)sender;
 - (void)resetPlayThrough;
 
+- (IBAction)record:(id)sender;
+
 - (void)recordLoop;
 - (void)stopCaptureSession;
 - (void)checkOnCaptureSession;
 
 - (void)buildMenus;
+
+- (void)newInternalSamples;
+- (void)newExternalSamples;
+- (void)stopLoop:(LLLoop*)liveloop;
+- (void)playLoop:(LLLoop*)liveloop;
 
 @end

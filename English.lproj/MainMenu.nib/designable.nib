@@ -1596,14 +1596,6 @@
 					<int key="connectionID">259</int>
 				</object>
 				<object class="IBConnectionRecord">
-					<object class="IBActionConnection" key="connection">
-						<string key="label">startStop:</string>
-						<reference key="source" ref="894127087"/>
-						<reference key="destination" ref="626679377"/>
-					</object>
-					<int key="connectionID">253</int>
-				</object>
-				<object class="IBConnectionRecord">
 					<object class="IBOutletConnection" key="connection">
 						<string key="label">arrayController</string>
 						<reference key="source" ref="894127087"/>
@@ -1634,6 +1626,14 @@
 						<reference key="destination" ref="621688917"/>
 					</object>
 					<int key="connectionID">312</int>
+				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBActionConnection" key="connection">
+						<string key="label">record:</string>
+						<reference key="source" ref="894127087"/>
+						<reference key="destination" ref="626679377"/>
+					</object>
+					<int key="connectionID">313</int>
 				</object>
 				<object class="IBConnectionRecord">
 					<object class="IBBindingConnection" key="connection">
@@ -2582,7 +2582,7 @@
 			<nil key="activeLocalization"/>
 			<dictionary class="NSMutableDictionary" key="localizations"/>
 			<nil key="sourceID"/>
-			<int key="maxID">312</int>
+			<int key="maxID">313</int>
 		</object>
 		<object class="IBClassDescriber" key="IBDocument.Classes">
 			<array class="NSMutableArray" key="referencedPartialClassDescriptions">
@@ -2591,7 +2591,7 @@
 					<string key="superclassName">NSObject</string>
 					<dictionary class="NSMutableDictionary" key="actions">
 						<string key="inputDeviceSelected:">id</string>
-						<string key="outputDeviceSelected:">id</string>
+						<string key="record:">id</string>
 						<string key="startStop:">id</string>
 					</dictionary>
 					<dictionary class="NSMutableDictionary" key="actionInfosByName">
@@ -2599,8 +2599,8 @@
 							<string key="name">inputDeviceSelected:</string>
 							<string key="candidateClassName">id</string>
 						</object>
-						<object class="IBActionInfo" key="outputDeviceSelected:">
-							<string key="name">outputDeviceSelected:</string>
+						<object class="IBActionInfo" key="record:">
+							<string key="name">record:</string>
 							<string key="candidateClassName">id</string>
 						</object>
 						<object class="IBActionInfo" key="startStop:">
@@ -2613,7 +2613,6 @@
 						<string key="listenHost">NSTextField</string>
 						<string key="listenPort">NSTextField</string>
 						<string key="mInputDevices">NSPopUpButton</string>
-						<string key="mOutputDevices">NSPopUpButton</string>
 						<string key="mProgress">NSProgressIndicator</string>
 						<string key="mStartButton">NSButton</string>
 					</dictionary>
@@ -2632,10 +2631,6 @@
 						</object>
 						<object class="IBToOneOutletInfo" key="mInputDevices">
 							<string key="name">mInputDevices</string>
-							<string key="candidateClassName">NSPopUpButton</string>
-						</object>
-						<object class="IBToOneOutletInfo" key="mOutputDevices">
-							<string key="name">mOutputDevices</string>
 							<string key="candidateClassName">NSPopUpButton</string>
 						</object>
 						<object class="IBToOneOutletInfo" key="mProgress">

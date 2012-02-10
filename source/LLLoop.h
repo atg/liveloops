@@ -8,6 +8,7 @@
 
 #import <Foundation/Foundation.h>
 #import <QTKit/QTKit.h>
+#import "constants.h"
 
 @interface LLLoop : NSObject {
     double currentLoopOffset;

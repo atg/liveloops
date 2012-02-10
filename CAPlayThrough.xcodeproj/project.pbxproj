@@ -38,6 +38,7 @@
 		7541706F14E45F4D00A9DFAD /* TCMPortMapper.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7541706E14E45F4D00A9DFAD /* TCMPortMapper.framework */; };
 		7541707114E4611E00A9DFAD /* TCMPortMapper.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 7541706E14E45F4D00A9DFAD /* TCMPortMapper.framework */; };
 		7541707914E4A7B100A9DFAD /* QTKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7541707814E4A7B100A9DFAD /* QTKit.framework */; };
+		7541707B14E4BA1A00A9DFAD /* constants.h in Headers */ = {isa = PBXBuildFile; fileRef = 7541707A14E4BA1A00A9DFAD /* constants.h */; };
 		8B9E523A0687AE9C00738FA5 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8B9E52370687AE9C00738FA5 /* AudioToolbox.framework */; };
 		8B9E523B0687AE9C00738FA5 /* AudioUnit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8B9E52380687AE9C00738FA5 /* AudioUnit.framework */; };
 		8B9E523C0687AE9C00738FA5 /* CoreAudio.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8B9E52390687AE9C00738FA5 /* CoreAudio.framework */; };
@@ -95,6 +96,7 @@
 		7541706514E45C4600A9DFAD /* MAAsyncIO.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MAAsyncIO.h; path = source/MAAsyncIO.h; sourceTree = "<group>"; };
 		7541706E14E45F4D00A9DFAD /* TCMPortMapper.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = TCMPortMapper.framework; sourceTree = "<group>"; };
 		7541707814E4A7B100A9DFAD /* QTKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QTKit.framework; path = System/Library/Frameworks/QTKit.framework; sourceTree = SDKROOT; };
+		7541707A14E4BA1A00A9DFAD /* constants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = constants.h; path = source/constants.h; sourceTree = "<group>"; };
 		8B9E52370687AE9C00738FA5 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = /System/Library/Frameworks/AudioToolbox.framework; sourceTree = "<absolute>"; };
 		8B9E52380687AE9C00738FA5 /* AudioUnit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioUnit.framework; path = /System/Library/Frameworks/AudioUnit.framework; sourceTree = "<absolute>"; };
 		8B9E52390687AE9C00738FA5 /* CoreAudio.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreAudio.framework; path = /System/Library/Frameworks/CoreAudio.framework; sourceTree = "<absolute>"; };
@@ -150,6 +152,7 @@
 				7541705114E45BF800A9DFAD /* MAHTTPRequest.h */,
 				7541705214E45BF800A9DFAD /* MAHTTPRequest.m */,
 				7541706514E45C4600A9DFAD /* MAAsyncIO.h */,
+				7541707A14E4BA1A00A9DFAD /* constants.h */,
 			);
 			name = Classes;
 			sourceTree = "<group>";
@@ -243,6 +246,7 @@
 				7541706114E45BF800A9DFAD /* MAFDSource.h in Headers */,
 				7541706314E45BF800A9DFAD /* MAHTTPRequest.h in Headers */,
 				7541706614E45C4600A9DFAD /* MAAsyncIO.h in Headers */,
+				7541707B14E4BA1A00A9DFAD /* constants.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

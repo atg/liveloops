@@ -6,10 +6,9 @@
 #import "LLRemoteHost.h"
 #import "LLRemoteClient.h"
 #import "LLLoop.h"
+#import "constants.h"
 
 #define LLTimestamp() ([NSDate timeIntervalSinceReferenceDate])
-
-#define BAR_LENGTH 2.0
 
 @implementation CAPlayThroughController
 
@@ -123,10 +122,17 @@
     if (!device)
         return;
     
-    QTCaptureDeviceInput* deviceinput = [[QTCaptureDeviceInput alloc] initWithDevice:device];
     
     NSError* err = nil;
     [self stopCaptureSession];
+    
+    if (![device open:&err]) {
+        NSLog(@"Could not open device: %@", err);
+        return;
+    }
+    openedDevice = [device retain];
+    
+    QTCaptureDeviceInput* deviceinput = [[QTCaptureDeviceInput alloc] initWithDevice:device];
     session = [[QTCaptureSession alloc] init];
     if (![session addInput:deviceinput error:&err]) {
         NSLog(@"Error adding input: %@", err);
@@ -146,18 +152,24 @@
     [session startRunning];
     
     // Check back every 1/8 of a second
-
+    [self checkOnCaptureSession];
 }
 - (void)stopCaptureSession {
     if (session) {
+        
+        
         [session stopRunning];
         [captureSessionOutputPath release];
         [session release];
         session = nil;
         captureSessionOutputPath = nil;
+        [openedDevice close];
+        [openedDevice release];
+        openedDevice = nil;
     }
 }
 - (void)checkOnCaptureSession {
+    NSLog(@"Checking capture session");
     if (captureSessionStart == 0)
         return;
     
@@ -187,26 +199,39 @@
 - (void)newInternalSamples {
     LLLoop* localloop = [loop retain];
     [serversQueue addOperationWithBlock:^{
-        for (LLRemoteHost* host in remo) {
+        for (LLRemoteHost* host in remoteServers) {
             
             [host didChangeLocalLoop:localloop];
         }
         [localloop release];
     }];
+    
+    [self playLoop:localloop];
 }
 - (void)newExternalSamples {
     
 }
 
-- (void)playLoop:(LLLoop*)loop {
-    [[loop movie] setAttribute:[NSNumber numberWithBool:YES] forKey:QTMovieLoopsAttribute];
+- (void)stopLoop:(LLLoop*)liveloop {
+    if (!liveloop)
+        return;
+    
+    [[liveloop movie] stop];
+}
+- (void)playLoop:(LLLoop*)liveloop {
+    [[liveloop movie] setAttribute:[NSNumber numberWithBool:YES] forKey:QTMovieLoopsAttribute];
     
     // Get the offset from the current bar
-    QTTime qttime = QTMakeTimeWithTimeInterval([loop currentLoopOffset] BAR_LENGTH);
-    [[loop movie] setCurrentTime:qttime];
+    // Both of these should be between 0 and BAR_LENGTH
+    NSTimeInterval currentDistanceFromBar = fmod(LLTimestamp() - playbackSessionStart, BAR_LENGTH);
+    NSTimeInterval wantedDistanceFromBar = liveloop.currentLoopOffset;
+    
+    
+    QTTime qttime = QTMakeTimeWithTimeInterval(fmod(wantedDistanceFromBar - currentDistanceFromBar, BAR_LENGTH));
+    [[liveloop movie] setCurrentTime:qttime];
     
     // Play!
-    [[loop movie] play];
+    [[liveloop movie] play];
 }
 
 
@@ -231,6 +256,11 @@
 
 - (IBAction)startStop:(id)sender
 {
+}
+
+- (IBAction)record:(id)sender {
+    
+    [self recordLoop];
 }
 
 - (void)buildMenus {
